@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Virtualenv
+.vscode/
+bin/
+include/
+lib/
+
+pip-selfcheck.json
