@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
      'rest_framework',
      'rest_framework.authtoken',
-     'rest_framework_swagger',
+     'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -99,7 +99,7 @@ AUTH_PASSWORD_VALIDATORS = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
-    ]
+    ],
 }
 
 # Internationalization
