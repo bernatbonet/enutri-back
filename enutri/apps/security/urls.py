@@ -3,6 +3,7 @@ from rest_framework import routers
 from apps.security import views
 
 router = routers.DefaultRouter()
+router.register(r'permissions', views.PermissionViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'users', views.UserViewSet)
 

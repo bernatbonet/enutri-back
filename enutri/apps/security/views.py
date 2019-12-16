@@ -1,6 +1,13 @@
-from django.contrib.auth.models import Group, User
+from django.contrib.auth.models import Group, Permission,  User
 from rest_framework import viewsets
-from apps.security.serializers import GroupSerializer, UserSerializer
+from apps.security.serializers import GroupSerializer, PermissionSerializer, UserSerializer
+
+class PermissionViewSet(viewsets.ModelViewSet):
+    """
+    API endpint that allow permissions to be viewed or edited
+    """
+    queryset = Permission.objects.all()
+    serializer_class = PermissionSerializer
 
 class GroupViewSet(viewsets.ModelViewSet):
     """
