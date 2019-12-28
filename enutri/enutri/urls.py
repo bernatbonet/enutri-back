@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include 
+from django.views.generic import TemplateView
 from rest_framework import permissions
 from rest_framework.authtoken import views as views_auth_token
 from drf_yasg.views import get_schema_view
@@ -39,4 +40,5 @@ urlpatterns = [
     path('api-auth-token/', views_auth_token.obtain_auth_token),
     path('api/', include(urls_security)),
     path('admin/', admin.site.urls),
+    # path('', TemplateView.as_view(template_name='application.html', name='app')),
 ]

@@ -1,6 +1,7 @@
-from .base import *
+import os
+from .base import ALLOWED_HOSTS, BASE_DIR
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS += []
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases

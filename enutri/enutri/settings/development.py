@@ -1,7 +1,12 @@
-from .base import *
+import os
+from .base import (
+    BASE_DIR, FRONTEND_DIR, INSTALLED_APPS, MIDDLEWARE
+)
+
 
 INSTALLED_APPS += [
     'debug_toolbar', 
+    'webpack_loader',
 ]
 
 MIDDLEWARE += [
@@ -21,3 +26,11 @@ DATABASES = {
 INTERNAL_IP = [
     '127.0.0.1',
 ]
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': os.getenv('DJANGO_DEBUG') ,
+        'BUNDLE_DIR_NAME': '/bundles/',
+        'STATS_FILE': os.path.join(FRONTEND_DIR, 'webpack-stats.json'),
+    }
+}
